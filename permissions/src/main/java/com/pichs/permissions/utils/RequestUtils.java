@@ -8,9 +8,13 @@ import android.content.DialogInterface;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
+import com.pichs.permissions.PermissionUtils;
 import com.pichs.permissions.ui.AbstractPermissionInstructionDialog;
 import com.pichs.permissions.ui.PermissionDefaultDialog;
 
+/**
+ * 快速申请权限，简单封装
+ */
 public class RequestUtils {
 
     public static void requestReadPhonePermission(final Activity activity, final int requestCode, final PermissionHelper.Callback callback) {
@@ -121,6 +125,6 @@ public class RequestUtils {
     }
 
     public static void toAppSettingActivity(Context context) {
-        com.pichs.permissions.PermissionUtils.toAppSettingActivity(context);
+        PermissionUtils.toAppSettingActivity(context);
     }
 }

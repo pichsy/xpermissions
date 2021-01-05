@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                PermissionUtils.setPermissionInfoDialogEnable(true);
+                PermissionUtils.setPermissionInfoDialogShowTwice(MainActivity.this, true);
                 PermissionUtils.requestPermissionsWithDefaultDialog(MainActivity.this,
                         8912, new String[]{
                                 Manifest.permission.WRITE_EXTERNAL_STORAGE,
@@ -33,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
                         new PermissionUtils.OnPermissionCallback() {
                             @Override
                             public void onCallback(@Nullable String... deniedPermissions) {
-                                Log.d("Permissions", "deniedPermissions:" + deniedPermissions.length);
+                                if (deniedPermissions != null && deniedPermissions.length > 0) {
+                                    Log.d("Permissions", "deniedPermissions:" + deniedPermissions.length);
+                                    PermissionUtils.toAppSettingActivity(MainActivity.this);
+                                }
                             }
                         }
                 );

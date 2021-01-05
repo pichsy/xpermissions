@@ -50,7 +50,6 @@ public class PermissionUtils {
     public static void requestPermissions(@NonNull final Activity activity, final int requestCode, final String[] requestPermissions, final OnPermissionCallback onPermissionCallback) {
         if (requestPermissions == null || requestPermissions.length <= 0) {
             if (onPermissionCallback != null) {
-                Log.d(TAG, "requestPermissions: ====== null ");
                 onPermissionCallback.onCallback();
             }
             return;
@@ -58,7 +57,6 @@ public class PermissionUtils {
         // 如果勾选了不再提示，则进入游戏时不会再进行授权了。
         if (PermissionSpHelper.getInstance(activity).isNeverTips()) {
             if (onPermissionCallback != null) {
-                Log.d(TAG, "isNeverTips: ======true ");
                 onPermissionCallback.onCallback();
             }
             return;
@@ -67,7 +65,6 @@ public class PermissionUtils {
             @Override
             public void onGranted() {
                 if (onPermissionCallback != null) {
-                    Log.d(TAG, "onGranted: ======1 ");
                     onPermissionCallback.onCallback();
                 }
             }
@@ -75,12 +72,9 @@ public class PermissionUtils {
             @Override
             public void onDenied(String... permissions) {
                 if (PermissionSpHelper.getInstance(activity).isFirstRefuseShowDialog()) {
-                    Log.d(TAG, "onDenied==》isFirstRefuseShowDialog: =====1 = true ");
                     showFirstRefusePermissionDialog(activity, requestCode, requestPermissions, false, onPermissionCallback);
                 } else {
-                    Log.d(TAG, "onDenied==》isFirstRefuseShowDialog: =====1 = false ");
                     if (onPermissionCallback != null) {
-                        Log.d(TAG, "---onDenied---: ======1 ");
                         onPermissionCallback.onCallback(permissions);
                     }
                 }
@@ -90,12 +84,9 @@ public class PermissionUtils {
             @Override
             public void onNeverAskAgain(String... permissions) {
                 if (PermissionSpHelper.getInstance(activity).isFirstRefuseShowDialog()) {
-                    Log.d(TAG, "onNeverAskAgain==》isFirstRefuseShowDialog: =====1 = true ");
                     showFirstRefusePermissionDialog(activity, requestCode, requestPermissions, true, onPermissionCallback);
                 } else {
-                    Log.d(TAG, "onNeverAskAgain==》isFirstRefuseShowDialog: =====1 = false ");
                     if (onPermissionCallback != null) {
-                        Log.d(TAG, "onNeverAskAgain: ======1 ");
                         onPermissionCallback.onCallback(permissions);
                     }
                 }
@@ -105,10 +96,8 @@ public class PermissionUtils {
         boolean isNeedRequestPermission;
         if (PermissionSpHelper.getInstance(activity).isFirstRequestPermission()) {
             isNeedRequestPermission = hasDeniedPermission(activity, requestPermissions);
-            Log.d(TAG, "hasDeniedPermission: ======isNeedRequestPermission：：" + isNeedRequestPermission);
         } else {
             isNeedRequestPermission = hasDeniedWithoutNeverAskAgainPermission(activity, requestPermissions);
-            Log.d(TAG, "hasDeniedWithoutNeverAskAgainPermission: ======isNeedRequestPermission：：" + isNeedRequestPermission);
         }
         if (!isNeedRequestPermission) {
             // 没有可申请的权限，直接返回
@@ -134,7 +123,6 @@ public class PermissionUtils {
                     PermissionSpHelper.getInstance(activity).setNeverTips(true);
                 }
                 dialog.dismiss();
-                Log.d(TAG, "onCancelClicked: ======dismiss");
                 // 这里回调 取消默认相当于全部授权后的逻辑，游戏继续进行，所以用此回调
                 callback.onGranted();
             }
@@ -142,7 +130,6 @@ public class PermissionUtils {
             @Override
             public void onOkClicked(DialogInterface dialog, boolean isNeverPrompt) {
                 dialog.dismiss();
-                Log.d(TAG, "onOkClicked: ======dismiss");
                 PermissionSpHelper.getInstance(activity).setFirstRequestPermission(false);
                 PermissionHelper.requestPermissions(activity, requestCode, callback, requestPermissions);
             }
