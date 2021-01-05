@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- message 拼接-->
+    <string name="lcm_permission_list_read_external_storage_introduce">存儲空間權限開啓後，應用會緩存圖片和視頻，降低流量消耗。</string>
+    <string name="lcm_permission_list_read_phone_state_introduce">設備信息權限開啓後，應用會讀取設備參數信息，來保障賬戶安全。</string>
+    <string name="lcm_permission_list_message_body_text">%1$s需要%2$s%3$s權限%4$s%5$s%6$s</string>
+    <string name="lcm_permission_list_read_external_storage">存儲空間</string>
+    <string name="lcm_permission_list_read_phone_state">設備信息</string>
+    <string name="lcm_permission_list_message_text_permission">權限</string>
+    <!--  title  -->
+    <string name="lcm_permission_checkbox_text">拒絕後不再提示</string>
+    <string name="lcm_permission_title_default_text">權限申請</string>
+    <!--  button  -->
+    <string name="lcm_permission_button_default_ok_text">同意</string>
+    <string name="lcm_permission_button_default_cancel_text">拒絕</string>
+    <!--  相冊權限  -->
+    <string name="lcm_permission_picture_read_external_storage_introduce">%1$s需要存儲空間權限，你可以分享圖庫內容，並允許%2$s在你的設備上存儲照片等信息。</string>
+    <!--  逗號  -->
+    <string name="lcm_permission_comma">，</string>
+    <!--  頓號  -->
+    <string name="lcm_permission_dawn">、</string>
+    <!--  句號  -->
+    <string name="lcm_permission_full_stop">。</string>
+
+</resources>

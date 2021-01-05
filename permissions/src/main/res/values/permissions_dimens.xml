@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="lcm_permission_dialog_width">320dp</dimen>
+	<dimen name="lcm_permission_dialog_height">250dp</dimen>
+	<dimen name="lcm_permission_dialog_text_size">15dp</dimen>
+	<dimen name="lcm_permission_button_text_size">14sp</dimen>
+</resources>

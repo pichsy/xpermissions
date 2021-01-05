@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="permission_dialog_button_text_color">#448AFF</color>
+	<color name="permission_dialog_message_text_color">#FF0D0C0C</color>
+
+	<color name="lcm_permission_dialog_btn">#448AFF</color>
+	<color name="lcm_permission_message_text_color">#606060</color>
+	<color name="lcm_permission_cancel_button_text_color">#696969</color>
+	<color name="lcm_permission_ok_button_text_color">#ffffff</color>
+	<color name="lcm_permission_cbox_text_color">#8D8D8D</color>
+
+</resources>

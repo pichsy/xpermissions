@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- message 拼接-->
+    <string name="lcm_permission_list_read_external_storage_introduce">When storage permission are turned on,&#160;the app caches images and videos,&#160;reducing traffic consumption.</string>
+    <string name="lcm_permission_list_read_phone_state_introduce">The device information permission is used to read device parameter information to ensure account security.&#160;</string>
+    <string name="lcm_permission_list_message_body_text">%1$s needs %2$s %3$s permissions %4$s%5$s %6$s</string>
+    <string name="lcm_permission_list_read_external_storage">storage</string>
+    <string name="lcm_permission_list_read_phone_state">device information</string>
+    <string name="lcm_permission_list_message_text_permission">permission</string>
+    <!--  title  -->
+    <string name="lcm_permission_checkbox_text">"Don't ask after rejection"</string>
+    <string name="lcm_permission_title_default_text">Permission request</string>
+    <!--  button  -->
+    <string name="lcm_permission_button_default_ok_text">AGREE</string>
+    <string name="lcm_permission_button_default_cancel_text">REFUSE</string>
+    <!--  相册权限  -->
+    <string name="lcm_permission_picture_read_external_storage_introduce">%1$s needs storage permission, this lets you share from your gallery and lets %2$s store information like photos on your device.</string>
+    <!--  逗号  -->
+    <string name="lcm_permission_comma">,&#160;</string>
+    <!--  顿号  -->
+    <string name="lcm_permission_dawn">,&#160;</string>
+    <!--  句号  -->
+    <string name="lcm_permission_full_stop">.&#160;</string>
+
+</resources>

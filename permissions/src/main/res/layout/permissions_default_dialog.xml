@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/permissions_dialog_bg">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lcm_permission_dialog_height"
+        android:orientation="vertical"
+        android:paddingLeft="23dp"
+        android:paddingTop="20dp"
+        android:paddingRight="23dp"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:id="@+id/lcm_permission_title_layout_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/permission_dialog_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lcm_permission_cbox_layout_id"
+            android:layout_below="@+id/lcm_permission_title_layout_id"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            android:scrollbarThumbVertical="@drawable/permissions_scrollbar_vertical_thumb"
+            android:scrollbarTrackVertical="@drawable/permissions_scrollbar_vertical_track">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/permission_dialog_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/lcm_permission_message_text_color"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/lcm_permission_cbox_layout_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_above="@+id/lcm_permission_bottom_layout_id"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/lcm_permission_cbox"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:background="@drawable/permissions_ic_cbox_selector"
+                android:button="@android:color/transparent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:text="@string/lcm_permission_checkbox_text"
+                android:textColor="@color/lcm_permission_cbox_text_color"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lcm_permission_bottom_layout_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/permission_dialog_btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_weight="1"
+                android:background="@drawable/permissions_dialog_button_bg"
+                android:gravity="center"
+                android:text="@string/lcm_permission_button_default_cancel_text"
+                android:textColor="@color/lcm_permission_cancel_button_text_color"
+                android:textSize="@dimen/lcm_permission_button_text_size" />
+
+            <TextView
+                android:id="@+id/permission_dialog_btn_ok"
+                android:layout_width="0dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="56dp"
+                android:layout_weight="1"
+                android:background="@drawable/permissions_dialog_button_ok_bg"
+                android:gravity="center"
+                android:text="@string/lcm_permission_button_default_ok_text"
+                android:textColor="@color/lcm_permission_ok_button_text_color"
+                android:textSize="@dimen/lcm_permission_button_text_size" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

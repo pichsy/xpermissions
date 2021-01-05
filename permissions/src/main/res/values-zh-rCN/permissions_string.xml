@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- message 拼接-->
+    <string name="lcm_permission_list_read_external_storage_introduce">存储空间权限开启后，应用会缓存图片和视频，降低流量消耗。</string>
+    <string name="lcm_permission_list_read_phone_state_introduce">设备信息权限开启后，应用会读取设备参数信息，来保障账户安全。</string>
+    <!--  1:appName,2:权限1，3:权限2，4：句号 5：权限1介绍，6：权限2介绍 -->
+    <string name="lcm_permission_list_message_body_text">%1$s需要%2$s%3$s权限%4$s%5$s%6$s</string>
+    <string name="lcm_permission_list_read_external_storage">存储空间</string>
+    <string name="lcm_permission_list_read_phone_state">设备信息</string>
+    <string name="lcm_permission_list_message_text_permission">权限</string>
+    <!--  title  -->
+    <string name="lcm_permission_checkbox_text">拒绝后不再提示</string>
+    <string name="lcm_permission_title_default_text">权限申请</string>
+    <!--  button  -->
+    <string name="lcm_permission_button_default_ok_text">同意</string>
+    <string name="lcm_permission_button_default_cancel_text">拒绝</string>
+    <!--  相册权限  -->
+    <string name="lcm_permission_picture_read_external_storage_introduce">%1$s需要存储空间权限，你可以分享图库内容，并允许%2$s在你的设备上存储照片等信息。</string>
+    <!--  逗号  -->
+    <string name="lcm_permission_comma">，</string>
+    <!--  顿号  -->
+    <string name="lcm_permission_dawn">、</string>
+    <!--  句号  -->
+    <string name="lcm_permission_full_stop">。</string>
+</resources>
