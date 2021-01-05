@@ -1,4 +1,4 @@
-# XFileChooser
+# XPermissions
 
 权限请求框架，自带授权前提示弹窗功能
 
@@ -23,6 +23,8 @@
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                PermissionUtils.setPermissionInfoDialogEnable(true);
+                PermissionUtils.setPermissionInfoDialogShowTwice(MainActivity.this, true);
                 PermissionUtils.requestPermissionsWithDefaultDialog(MainActivity.this,
                         8912, new String[]{
                                 Manifest.permission.WRITE_EXTERNAL_STORAGE,
