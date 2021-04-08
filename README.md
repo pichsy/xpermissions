@@ -1,3 +1,6 @@
+# 最新地址, 该项目已移到gitee
+# [https://gitee.com/pichs/xpermission](https://gitee.com/pichs/xpermission)
+
 # XPermissions
 
 权限请求框架，自带授权前提示弹窗功能
